@@ -230,7 +230,6 @@ const authStore = useAuthStore()
 const appStore = useAppStore()
 
 const siteName = computed(() => appStore.cachedPublicSettings?.site_name || appStore.siteName || 'AI API 服务平台')
-const siteLogo = computed(() => appStore.cachedPublicSettings?.site_logo || appStore.siteLogo || '')
 const siteSubtitle = computed(() => appStore.cachedPublicSettings?.site_subtitle || '稳定高效的 AI 模型接口服务')
 const homeContent = computed(() => appStore.cachedPublicSettings?.home_content || '')
 
@@ -255,9 +254,9 @@ const stats = [
 ]
 
 const features = [
-  { icon: 'server', title: '统一网关', desc: '支持 Claude、GPT、Gemini 等主流模型 API，统一接入格式，一个密钥访问所有模型', iconBg: 'bg-gradient-to-br from-primary-500 to-primary-600 shadow-primary-500/30' },
-  { icon: 'shield', title: '安全稳定', desc: '企业级安全架构，数据加密传输，独立 API Key 隔离，多节点负载均衡高可用', iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 shadow-amber-500/30' },
-  { icon: 'chart', title: '灵活计费', desc: 'Token 级精确计量，实时余额追踪，透明定价无隐藏费用，用多少付多少', iconBg: 'bg-gradient-to-br from-rose-500 to-pink-500 shadow-rose-500/30' }
+  { icon: 'server' as const, title: '统一网关', desc: '支持 Claude、GPT、Gemini 等主流模型 API，统一接入格式，一个密钥访问所有模型', iconBg: 'bg-gradient-to-br from-primary-500 to-primary-600 shadow-primary-500/30' },
+  { icon: 'shield' as const, title: '安全稳定', desc: '企业级安全架构，数据加密传输，独立 API Key 隔离，多节点负载均衡高可用', iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500 shadow-amber-500/30' },
+  { icon: 'chart' as const, title: '灵活计费', desc: 'Token 级精确计量，实时余额追踪，透明定价无隐藏费用，用多少付多少', iconBg: 'bg-gradient-to-br from-rose-500 to-pink-500 shadow-rose-500/30' }
 ]
 
 const modelCategories = [
